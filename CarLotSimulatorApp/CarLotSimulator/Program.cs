@@ -6,6 +6,49 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            
+            var carLotOne = new CarLot();
+            
+            var car1 = new Car();
+            car1.Year = 1978;
+            car1.Make = "Nissan";
+            car1.Model = "Datsun";
+            car1.IsDriveable = true;
+            
+            car1.MakeEngineNoise("Clanking");
+            car1.MakeHonkNoise("Beep beep");
+            
+            carLotOne.ParkingLot.Add(car1);
+            
+            var car2 = new Car();
+            car2.Year = 2025;
+            car2.Make = "Toyota";
+            car2.Model = "Highlander";
+            car2.IsDriveable = false;
+            
+            car2.MakeEngineNoise("Grinding");
+            car2.MakeHonkNoise("Honk honk");
+            
+            carLotOne.ParkingLot.Add(car2);
+            
+            var car3 = new Car()
+            {
+                Year = 1998,
+                Make = "Toyota",
+                Model = "Corolla",
+                IsDriveable = true,
+            };
+
+            car3.MakeEngineNoise("Roaaawwwwwwrrr");
+            car3.MakeHonkNoise("WAAAAMP");
+            
+            carLotOne.ParkingLot.Add(car3);
+            
+            carLotOne.CheckCars();
+
+
+
+
             //TODO
 
             //Create a seperate class file called Car

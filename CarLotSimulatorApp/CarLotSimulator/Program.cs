@@ -7,20 +7,26 @@ namespace CarLotSimulator
         static void Main(string[] args)
         {
             
+            
             var carLotOne = new CarLot();
             
             var car1 = new Car();
+            CarLot.numberOfCars++;
+            Console.WriteLine($"Cars in lot: {CarLot.numberOfCars}");
+            
             car1.Year = 1978;
             car1.Make = "Nissan";
             car1.Model = "Datsun";
             car1.IsDriveable = true;
-            
             car1.MakeEngineNoise("Clanking");
             car1.MakeHonkNoise("Beep beep");
             
             carLotOne.ParkingLot.Add(car1);
             
             var car2 = new Car();
+            CarLot.numberOfCars++;
+            Console.WriteLine($"Cars in lot: {CarLot.numberOfCars}");
+            
             car2.Year = 2025;
             car2.Make = "Toyota";
             car2.Model = "Highlander";
@@ -38,7 +44,9 @@ namespace CarLotSimulator
                 Model = "Corolla",
                 IsDriveable = true,
             };
-
+            
+            CarLot.numberOfCars++;
+            Console.WriteLine($"Cars in lot: {CarLot.numberOfCars}");
             car3.MakeEngineNoise("Roaaawwwwwwrrr");
             car3.MakeHonkNoise("WAAAAMP");
             
@@ -46,7 +54,7 @@ namespace CarLotSimulator
             
             carLotOne.CheckCars();
 
-
+            
 
 
             //TODO
